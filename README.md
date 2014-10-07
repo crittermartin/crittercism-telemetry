@@ -1,10 +1,13 @@
-crittercism-telemetry
+Crittercism-Telemetry Connector
 =====================
 
-Crittercism (http://crittercism.com) connector to Telemetry (http://telemetryapp.com)
+This is a Node.js app that retrieves live stats on app loads, crashes and exceptions from Crittercism and displays them in Telemetry dashboards.
 
-Retrieves live stats on app loads, crashes and exceptions from
-Crittercism and populates Telemetry dashboards.
+Requirements:
+
+1. A Crittercism account with a REST API access token - http://crittercism.com
+2. A Telemetry account with room to create 2 additional dashboards - http://telemetryapp.com
+3. Node.js and npm - http://nodejs.org
 
 To use:
 
