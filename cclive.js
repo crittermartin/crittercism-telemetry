@@ -3,7 +3,7 @@
 //
 // Retrieves live stats on app loads, crashes and exceptions from
 // Crittercism and populates Telemetry dashboards.
-//
+
 // To use:
 // 1. Fill in your Crittercism and Telemetry access info in ./ccconfig.js
 // 2. Install dependencies by typing "npm install" in this directory
@@ -416,9 +416,9 @@ async.series([
 	},
 
 	function scheduleUpdate(callback) {
-		var serviceMetricsRule = new schedule.RecurrenceRule();
-		serviceMetricsRule.second = [00, 30];
-		var serviceMetricsJob = schedule.scheduleJob(serviceMetricsRule, function(){
+		var liveStatsRule = new schedule.RecurrenceRule();
+		liveStatsRule.second = [00, 30];
+		var liveStatsJob = schedule.scheduleJob(liveStatsRule, function(){
 			async.series([
 				function getData(callback) {
 					async.parallel([
